@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans Linear A">
     
 
-    <title>Document</title>
+    <title>Noan LISSILLOUR</title>
 </head>
 <body>
+    <script src="script.js"></script>
     <div class="main-page">
         <div class="head">
             <div class="namehead">
@@ -21,6 +22,10 @@
                     <li><a>Home</a></li>
                     <li><a>About</a></li>
                     <li><a>Contact</a></li>
+                    <div>
+                        <img id="lang" src="imgs/fr.png" onclick="chgLang()"/>
+
+                    </div>
                 </ul>
             </div>
         </div>
@@ -28,7 +33,7 @@
             <div class="infos">
                 <div class="name">
                     <h1><span id="n">I</span>'m</h1>
-                    <h1>Noan LISSILLOUR</h1>
+                    <h1 id="name">Noan LISSILLOUR</h1>
                     <div class="underline"></div>
                     <h2>Student Developer</h2>
                     <p>Hey ! je suis Noan et je suis un étudiant dévelopeur. J'étudie la programmation orienté objet, le web(design et backend), du SQL, etc ...</p>
@@ -56,7 +61,7 @@
                 <h1>Developpement</h1>
                 <div class="backend">
                     <h2>Languages Backend</h2>
-                    <h3><span id="n">P</span>ython</h3>
+                    <h3><span id="n">Py</span>thon</h3>
                     <div class="bar">
                         <div id="python" class="innerbar"></div>
                     </div>
@@ -99,6 +104,34 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <h1><span id="n">C</span>ontact</h1>
+        <div class="contact">
+            <h2>Contactez-moi via ces réseaux :</h2>
+            <div class="reseaux">
+                <img src="imgs/github.png"/>
+                <img src="imgs/linkedin.png"/>
+                <img src="imgs/mail.png"/>
+
+            </div>
+            <div class="contact-text">
+                <p>Vous pouvez me contacter par mail ou par téléphone, je vous répondrais dans les plus brefs délais.</p>
+            </div>
+            <div class="contact-form">
+                <form action="index.php" method="post">
+                    <div class="top_form">
+                        <input type="text" name="name" placeholder="Nom" required>
+                        <input type="email" name="email" placeholder="Email/ n° tel" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Sujet" required>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <input type="submit" name="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+
+
         </div>
     </div>
 
