@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="element">
+            <div class="tl_void"></div>
+            <div class="tl">
+                <div class="line" id="tlfirst"></div>
+                <div class="tl_circle"></div>
+                <div class="tl_line1"></div>
+            </div>
+            <div class="about_content">
+                <div class="card_about">
+                    <h1>20XX - College Mona Ozouf</h1>
+                    <p>C'est a partir du collège ou je decouvre le développement via scratch. Puis par la suite je me suis mit a apprendre le python. Mon stage de 3eme se portant sur le milieu de l'informatique, j'ai pu y rencontrer des developpeurs ce qui a confirmé mon choix de devenir developpeur</p>
+                </div>
+            </div>
+        </div>
+        <div class="element">
+            <div class="about_content">
+                <div class="card_about">
+                    <h1>20XX - Lycée Nicolas Appert</h1>
+                    <p>Arrivé au lycée j'entame une seconde générale pour pouvoir en premiere et en terminale rejoindre une filière STI2D. En premiere, j'apprend les bases du HTML et du CSS ainsi que les bases du C afin de programmer des cartes arduinos. Puis en terminale, je consolide mes bases de C et découvre de nouveaux langages tel que le PHP, le SQL</p>
+                </div>
+            </div>
+            <div class="tl">
+                <div class="tl_line"></div>
+                <div class="tl_circle"></div>
+                <div class="tl_line1"></div>
+            </div>
+            <div class="tl_void">
+            </div>
+        </div>
+        <div class="element">
+            <div class="tl_void"></div>
+            <div class="tl">
+                <div class="tl_line"></div>
+                <div class="tl_circle"></div>
+                <div class="tl_line1"></div>
+            </div>
+            <div class="about_content">
+                <div class="card_about">
+                    <h1>2023 -> ? - IUT de Nantes</h1>
+                    <p>C'est ici que j'ai réellement senti une amélioration sur la maitrise des languages de programmation en HTML, CSS, Python ainsi que SQL. Mais j'ai aussi decouvert de nouveaux langages avec le golang, le bash et le kotlin </p>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+    
+    
+</body>
+</html>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #201F23;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .element{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .tl_void{
+        width: 49%;
+    }
+    .tl{
+        display: flex;
+        width: 2%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .tl_circle{
+        background-color: orange;
+        width: 100%;
+        height: 5.7vw;
+        border-radius: 50%;
+        margin: 35% 0 35% 0;
+    }
+    .tl_line{
+        background-color: orange;
+        width:  80%;
+        height: 100%;
+        border-radius: 0px 0px 10px 10px;
+    }
+    #tlfirst{
+        background-color: orange;
+        width:  80%;
+        height:  100%;
+        border-radius:10px;
+    }
+    .tl_line1{
+        background-color: orange;
+        width: 80%;
+        height: 100%;
+        border-radius:10px 10px 0 0;
+    }
+    .about_content{
+        width: 49%;
+    }
+    .card_about{
+        transition: 0.5s;
+        background-color: #1A191C;
+        border-radius: 10px;
+        padding: 10px;
+        color: white;
+        font-family: 'Noto Sans Linear A', sans-serif;
+        border: 2px orange solid;
+        margin: 2% 5% 2% 5%;
+    }
+    .card_about:hover{
+        transition: 0.5s;
+        background-color: #1A191C;
+        border-radius: 10px;
+        padding: 10px;
+        color: white;
+        font-family: 'Noto Sans Linear A', sans-serif;
+        border: 2px orange solid;
+        margin: 2.5% 5.5% 2.5% 5.5%;
+        box-shadow: 0px 0px 10px 0px #5c5a5a;
+    }
+    
+</style>

@@ -115,6 +115,12 @@ h1{
     color: #fff;
     font-size: 4rem;
 }
+.maintitle{
+    margin-top: 10vh;
+    font-family: Archivo Black;
+    color: #fff;
+    font-size: 4rem;
+}
 #name{
     line-height: 100%;
 }
@@ -197,6 +203,82 @@ h1{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+.element{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.about h1{
+    font-family: Archivo Black;
+    color: #fff;
+    font-size: 2rem;
+
+}
+.tl_void{
+    width: 49%;
+}
+.tl{
+    display: flex;
+    width: 2%;
+    align-items: center;
+    flex-direction: column;
+}
+.tl_circle{
+    background-color: orange;
+    width: 100%;
+    height: 6vw;
+    border-radius: 50%;
+    margin: 35% 0 35% 0;
+}
+.tl_line{
+    background-color: orange;
+    width:  80%;
+    height: 100%;
+    border-radius: 0px 0px 10px 10px;
+}
+#tlfirst{
+    background-color: orange;
+    width:  80%;
+    height:  100%;
+    border-radius:10px;
+}
+#tl_end{
+    background-color: orange;
+    width:  80%;
+    height:  100%;
+    border-radius:10px;
+
+}
+.tl_line1{
+    background-color: orange;
+    width: 80%;
+    height: 100%;
+    border-radius:10px 10px 0 0;
+}
+.about_content{
+    width: 49%;
+}
+.card_about{
+    transition: 0.5s;
+    background-color: #1A191C;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: 'Noto Sans Linear A', sans-serif;
+    border: 2px orange solid;
+    margin: 2% 7% 2% 7%;
+}
+.card_about:hover{
+    transition: 0.5s;
+    background-color: #1A191C;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-family: 'Noto Sans Linear A', sans-serif;
+    border: 2px orange solid;
+    box-shadow: 0px 0px 10px 0px #5c5a5a;
 }
 .skills{
     margin-top: 20px;
@@ -290,6 +372,133 @@ h1{
 }
 #linux{
     width: 70%;
+}
+.project-content{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.project-content img{
+    border: solid 2px #111;
+    width:100%;
+    border-radius: 6px;
+}
+.proj-card{
+    transition: 0.5s;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+    padding: 1% 2% 1% 2%;
+    border: 3px solid #111;
+    box-shadow: 0px 0px 10px 0px #111;
+    margin: 5px 5vw 0px 5vw;
+    background-color: #1a191c;
+    border-radius: 10px;
+}
+.proj-card:hover{
+    transition: 0.5s;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+    padding: 1% 2% 1% 2%;
+    border: 3px solid #111;
+    box-shadow: 0px 0px 10px 0px rgb(36, 36, 36);
+    margin: 5px 5vw 0px 5vw;
+    background-color: #1a191c;
+    border-radius: 10px;
+}
+.proj-card h2{
+    font-size: 2rem;
+    color: #fff;
+    font-family: Archivo Black;;
+}
+.proj-card p{
+    font-size: 0.85rem;
+    color: #fff;
+    font-family: Archivo Black;
+}
+.proj-right img{
+    height: 5vh;
+    width: 5vh;
+    border-radius: 6px;
+    border: solid 2px #111;
+    margin-right: 5%;
+}
+
+.proj-left{
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 1%;
+    
+}
+.proj-right{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.projfoot{
+    margin-top: 2%;
+    margin-left: 4%;
+    height: 7vh;
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.code{
+    background-color: #111;
+    padding: 2% 6% 2% 2%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.play{
+    display: flex;
+    flex-direction: row;
+}
+.play img{
+    width: 5vh;
+    margin-left: 0.5vw;
+}
+#phpcode{
+    width: 8vh;
+}
+.play a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 1% 2% 1% 2%;
+    border-radius: 5px;
+    margin-right: 2%;
+}
+.playbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vh;
+    height: 3vh;
+    border-radius: 4px;
+    background-color: #FFAB00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    color: #fff;
 }
 .contact{
     width: 100%;

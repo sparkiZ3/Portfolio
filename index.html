@@ -19,8 +19,9 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a>Home</a></li>
                     <li><a>About</a></li>
+                    <li><a>Skills</a></li>
+                    <li><a>projects</a></li>
                     <li><a>Contact</a></li>
                     <div>
                         <img id="lang" src="imgs/fr.png" onclick="chgLang()"/>
@@ -36,7 +37,7 @@
                     <h1 id="name">Noan LISSILLOUR</h1>
                     <div class="underline"></div>
                     <h2>Student Developer</h2>
-                    <p>Hey ! je suis Noan et je suis un étudiant dévelopeur. J'étudie la programmation orienté objet, le web(design et backend), du SQL, etc ...</p>
+                    <p>Hey ! je suis Noan et je suis un étudiant dévelopeur. J'étudie actuellement la programmation dans le cadre de mes etudes a l'IUT.</p>
                     <div class="button">
                         <a href="#">Me contacter<div class="contactbutton"></div></a>
                         <a href="#">Me contacter<div class="contactbutton"></div></a>
@@ -50,12 +51,51 @@
     </div>
     <div class="under-main">
         <h1><span id="n">A</span>bout</h1>
-        <div class="about">
-            <div class="about-text">
-                <p>Je suis un étudiant développeur, j'étudie la programmation orienté objet, le web(design et backend), le SQL, etc ...</p>
+            <div class="about"><div class="element">
+                <div class="tl_void"></div>
+                <div class="tl">
+                    <div class="line" id="tlfirst"></div>
+                    <div class="tl_circle"></div>
+                    <div class="tl_line1"></div>
+                </div>
+                <div class="about_content">
+                    <div class="card_about">
+                        <h1>20XX - College Mona Ozouf</h1>
+                        <p>C'est a partir du collège ou je decouvre le développement via scratch. Puis par la suite je me suis mit a apprendre le python. Mon stage de 3eme se portant sur le milieu de l'informatique, j'ai pu y rencontrer des developpeurs ce qui a confirmé mon choix de devenir developpeur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="element">
+                <div class="about_content">
+                    <div class="card_about">
+                        <h1>20XX - Lycée Nicolas Appert</h1>
+                        <p>Arrivé au lycée j'entame une seconde générale pour pouvoir en premiere et en terminale rejoindre une filière STI2D. En premiere, j'apprend les bases du HTML et du CSS ainsi que les bases du C afin de programmer des cartes arduinos. Puis en terminale, je consolide mes bases de C et découvre de nouveaux langages tel que le PHP, le SQL</p>
+                    </div>
+                </div>
+                <div class="tl">
+                    <div class="tl_line"></div>
+                    <div class="tl_circle"></div>
+                    <div class="tl_line1"></div>
+                </div>
+                <div class="tl_void">
+                </div>
+            </div>
+            <div class="element">
+                <div class="tl_void"></div>
+                <div class="tl">
+                    <div class="tl_line"></div>
+                    <div class="tl_circle"></div>
+                    <div class="tl_line1" id="tl_end"></div>
+                </div>
+                <div class="about_content">
+                    <div class="card_about">
+                        <h1>2023 -> ? - IUT de Nantes</h1>
+                        <p>C'est ici que j'ai réellement senti une amélioration sur la maitrise des languages de programmation en HTML, CSS, Python ainsi que SQL. Mais j'ai aussi decouvert de nouveaux langages avec le golang, le bash et le kotlin </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <h1><span id="n">S</span>kills</h1>
+        <h1 class="maintitle"><span id="n">S</span>kills</h1>
         <div class="skills">
             <div class="dev-skills">
                 <h1>Developpement</h1>
@@ -105,17 +145,43 @@
                 </div>
             </div>
         </div>
-        <h1><span id="n">C</span>ontact</h1>
+        <h1 class="maintitle"><span id="n">P</span>rojects</h1>
+        <div class="project-content">
+            <div class="proj-card">
+                <div class="proj-left">
+                    <img src="imgs/flaggame.png"></img>
+                </div>
+                <div class="proj-right">
+                    <div class="projhead">
+                        <h2>Projet flag-game</h2>
+                        <p>Le projet flag-game est un projet est un jeux qui consiste a trouver a partir du drapeau, le nom du pays</p>
+                    </div>
+                    <div class="projfoot">
+                        <div class="code">
+                            <img src="imgs/html.png"/>
+                            <img src="imgs/css.png"/>
+                            <img id="phpcode"src="imgs/php.png"/>
+                        </div>
+                        <div class="play">
+                            <a href="#"><div class="playbutton">Jouer</div></a>
+                            <a href="https://github.com/sparkiZ3/geo_quizz"><img src="imgs/github.svg"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <h1 class="maintitle"><span id="n">C</span>ontact</h1>
         <div class="contact">
             <h2>Contactez-moi via ces réseaux :</h2>
             <div class="reseaux">
-                <img src="imgs/github.png"/>
-                <img src="imgs/linkedin.png"/>
-                <img src="imgs/mail.png"/>
+                <img src="imgs/github.svg"/>
+                <img src="imgs/linkedin.svg"/>
+                <img src="imgs/mail.svg"/>
 
             </div>
             <div class="contact-text">
-                <p>Vous pouvez me contacter par mail ou par téléphone, je vous répondrais dans les plus brefs délais.</p>
+                <p>Vous pouvez me contacter par mail ou par téléphone</p>
             </div>
             <div class="contact-form">
                 <form action="index.php" method="post">
@@ -128,10 +194,6 @@
                     <input type="submit" name="submit" value="Envoyer">
                 </form>
             </div>
-        </div>
-        <div class="footer">
-
-
         </div>
     </div>
 
