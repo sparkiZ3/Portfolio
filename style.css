@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
 body{
     background-color: #201F23;
     margin: 0;
