@@ -18,23 +18,26 @@
                     <textarea placeholder="Message" required></textarea>
                 </div>
             </div>
-            
             <input class="submit" type="submit" value="envoyer !" />
         </form>
+        <div class="contactspace"></div>
         <div class="content_contact">
-            <div class="contact_info">
-                <img class="contact_img">
-                <p>Nantes</p>
+            <div class="content_contact_container">
+                <div class="contact_info">
+                    <img class="contact_img">
+                    <p>Nantes</p>
+                </div>
+                <div class="contact_info">
+                    <img class="contact_img">
+                    <p>+33 6 59 31 74 07</p>
+                </div>
+                <div class="contact_info">
+                    <img class="contact_img">
+                    <a HREF="mailto:noan.lissillour@gmail.com"><p>noan.lissillour@gmail.com</p></a>
+                </div>
+                <hr>
             </div>
-            <div class="contact_info">
-                <img class="contact_img">
-                <p>+33 6 59 31 74 07</p>
-            </div>
-            <div class="contact_info">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <img class="contact_img" src="imgs/email.png">
-                <a HREF="mailto:noan.lissillour@gmail.com"><p>noan.lissillour@gmail.com</p></a>
-            </div>
+            
         </div>
     </div>
     
@@ -60,14 +63,18 @@
         width: 40%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: end;
+    }
+    .contactspace{
+        width: 10%;
     }
     .content_contact{
-        width: 50%;
+        width: 40%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: center;
+        color: white;
     }
     .form_container{
         width: 100%;
@@ -118,6 +125,10 @@
         margin-bottom: 0;
     }
     .submit{
-        width: 70%;
+        width: 99%;
+    }
+    .contact_info{
+        display: flex;
+        flex-direction: row;
     }
 </style>
