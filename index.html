@@ -6,8 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo Black">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans Linear A">
-    
-
+    <script src="https://kit.fontawesome.com/923b733eaa.js" crossorigin="anonymous"></script>
     <title>Noan LISSILLOUR</title>
 </head>
 <body>
@@ -17,7 +16,7 @@
             <div class="namehead">
                 <h1><span id="n">N</span>oan.</h1>
             </div>
-            <div class="menu">
+            <div id="desktopmenu" class="menu">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -25,10 +24,10 @@
                     <li><a href="#contact">Contact</a></li>
                     <div>
                         <img id="lang" src="imgs/fr.png" onclick="chgLang()"/>
-
                     </div>
                 </ul>
             </div>
+            <i id="phonemenu" class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
         </div>
         <div class="main">
             <div class="infos">
@@ -36,11 +35,11 @@
                     <h1><span id="n">I</span>'m</h1>
                     <h1 id="name">Noan LISSILLOUR</h1>
                     <div class="underline"></div>
-                    <h2>Student Developer</h2>
+                    <h2 id="profession">Student Developer</h2>
                     <p id="main_presentation">Hey ! je suis Noan et je suis un étudiant dévelopeur. J'étudie actuellement la programmation dans le cadre de mes etudes a l'IUT.</p>
                     <div class="button">
-                        <a id="contactbuttonmain" href="#">Me contacter</p><div class="contactbutton"></div></a>
-                        <a href="#">Me contacter<div class="contactbutton"></div></a>
+                        <a id="contactbuttonmain1" href="#">Me contacter</p><div class="contactbutton"></div></a>
+                        <a id="contactbuttonmain2" href="#">Me contacter<div class="contactbutton"></div></a>
                     </div>
                 </div>
                 </div>
@@ -68,8 +67,8 @@
             <div class="element">
                 <div class="about_content">
                     <div class="card_about">
-                        <h1>20XX - Lycée Nicolas Appert</h1>
-                        <p>Arrivé au lycée j'entame une seconde générale pour pouvoir en premiere et en terminale rejoindre une filière STI2D. En premiere, j'apprend les bases du HTML et du CSS ainsi que les bases du C afin de programmer des cartes arduinos. Puis en terminale, je consolide mes bases de C et découvre de nouveaux langages tel que le PHP, le SQL</p>
+                        <h1 id="appert">20XX - Lycée Nicolas Appert</h1>
+                        <p id="appert_text">Arrivé au lycée j'entame une seconde générale pour pouvoir en premiere et en terminale rejoindre une filière STI2D. En premiere, j'apprend les bases du HTML et du CSS ainsi que les bases du C afin de programmer des cartes arduinos. Puis en terminale, je consolide mes bases de C et découvre de nouveaux langages tel que le PHP, le SQL</p>
                     </div>
                 </div>
                 <div class="tl">
@@ -89,8 +88,8 @@
                 </div>
                 <div class="about_content">
                     <div class="card_about">
-                        <h1>2023 -> ? - IUT de Nantes</h1>
-                        <p>C'est ici que j'ai réellement senti une amélioration sur la maitrise des languages de programmation en HTML, CSS, Python ainsi que SQL. Mais j'ai aussi decouvert de nouveaux langages avec le golang, le bash et le kotlin </p>
+                        <h1 id="IUT" >2023 -> ? - IUT de Nantes</h1>
+                        <p id="IUT_text">C'est ici que j'ai réellement senti une amélioration sur la maitrise des languages de programmation en HTML, CSS, Python ainsi que SQL. Mais j'ai aussi decouvert de nouveaux langages avec le golang, le bash et le kotlin </p>
                     </div>
                 </div>
             </div>
@@ -169,30 +168,43 @@
                     </div>
                 </div>
             </div>
-            
         </div>
         <h1 id="contact" class="maintitle"><span id="n">C</span>ontact</h1>
-        <div class="contact">
-            <h2>Contactez-moi via ces réseaux :</h2>
-            <div class="reseaux">
-                <img src="imgs/github.svg"/>
-                <img src="imgs/linkedin.svg"/>
-                <img src="imgs/mail.svg"/>
-
-            </div>
-            <div class="contact-text">
-                <p>Vous pouvez me contacter par mail ou par téléphone</p>
-            </div>
-            <div class="contact-form">
-                <form action="index.php" method="post">
-                    <div class="top_form">
-                        <input type="text" name="name" placeholder="Nom" required>
-                        <input type="email" name="email" placeholder="Email/ n° tel" required>
+        <div class="fullcontentcontact">
+            <form action="" method="get">
+                <div class="form_container">
+                    <div class="left_input">
+                        <input placeholder="Name" required>
+                        <input placeholder="Subject" required>
+                        <input id="final_input" placeholder="E-mail" required>
                     </div>
-                    <input type="text" name="subject" placeholder="Sujet" required>
-                    <textarea name="message" placeholder="Message" required></textarea>
-                    <input type="submit" name="submit" value="Envoyer">
-                </form>
+                    <div class="right_input">
+                        <textarea placeholder="Message" required></textarea>
+                    </div>
+                </div>
+                <input class="submit" type="submit" value="envoyer !" />
+            </form>
+            <div class="contactspace"></div>
+            <div class="content_contact">
+                <div class="content_contact_container">
+                    <div class="contact_info">
+                        <i class="fa-solid fa-location-dot fa-2xl" style="color: #FFAB00;"></i>
+                        <p>Nantes</p>
+                    </div>
+                    <div class="contact_info">
+                        <i class="fa-solid fa-phone fa-2xl" style="color: #FFAB00;"></i>
+                        <p>+33 6 59 31 74 07</p>
+                    </div>
+                    <div class="contact_info">
+                        <i class="fa-regular fa-envelope fa-2xl" style="color: #FFAB00;"></i>
+                        <p><a href="mailto:noan.lissillour@gmail.com"><p>noan.lissillour@gmail.com</p></a></p>
+                    </div>
+                    <hr>
+                    <div class="reseaux_list">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
