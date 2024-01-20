@@ -42,3 +42,7 @@ function chgLang(){
         }
     }
 }
+
+function printest(){
+    console.log("test")
+}

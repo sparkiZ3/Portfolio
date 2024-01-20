@@ -7,156 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="fullcontentcontact">
-        <form action="" method="get">
-            <div class="form_container">
-                <div class="left_input">
-                    <input placeholder="Name" required>
-                    <input placeholder="Subject" required>
-                    <input id="final_input" placeholder="E-mail" required>
-                </div>
-                <div class="right_input">
-                    <textarea placeholder="Message" required></textarea>
-                </div>
-            </div>
-            <input class="submit" type="submit" value="envoyer !" />
-        </form>
-        <div class="contactspace"></div>
-        <div class="content_contact">
-            <div class="content_contact_container">
-                <div class="contact_info">
-                    <i class="fa-solid fa-location-dot fa-2xl" style="color: #FFAB00;"></i>
-                    <p>Nantes</p>
-                </div>
-                <div class="contact_info">
-                    <i class="fa-solid fa-phone fa-2xl" style="color: #FFAB00;"></i>
-                    <p>+33 6 59 31 74 07</p>
-                </div>
-                <div class="contact_info">
-                    <i class="fa-regular fa-envelope fa-2xl" style="color: #FFAB00;"></i>
-                    <p><a href="mailto:noan.lissillour@gmail.com"><p>noan.lissillour@gmail.com</p></a></p>
-                </div>
-                <hr>
-                <div class="reseaux_list">
-                    <i class="fa-brands fa-github fa-2xl"></i>
-                    <i class="fa-brands fa-linkedin fa-2xl"></i>
-                </div>
-            </div>
-            
-        </div>
-    </div>
     
+    <div class="content">
+        <svg id="mobile_menu" xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
 </body>
 </html>
 <style>
-    a {
-        text-decoration: none;
-        color: white;
-    }
     body{
         margin: 0;
         padding: 0;
-        background-color: #201F23;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
-    .fullcontentcontact{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    form{
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-    }
-    .contactspace{
+    .mobile_navbar{
+        transition: 1s;
+        left: -0px;
+        position: absolute;
+        height: 100vh;
         width: 10%;
+        background-color: black;
+        z-index: 1;
     }
-    .content_contact{
-        width: 40%;
+    .content{
         display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        color: white;
-    }
-    .form_container{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 2vh;
-    }
-    .left_input{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-    .right_input{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-    textarea{
-        width: 100%;
-        height: 100%;
-        background-color: #2b2b2b;
-        border: #FFAB00 2px solid;
-        border-radius: 10px;
-        outline: none;
-        color: white;
-        font-family: 'Noto Sans Linear A', sans-serif;
-        font-size: 1rem;
-        resize: none;
-        padding-top: 3%;
-        padding-left: 3%;
-    }
-    input{
-        margin-bottom: 5%;
-        width: 90%;
-        height: 5vh;
-        background-color: #2b2b2b;
-        border: #FFAB00 2px solid;
-        border-radius: 10px;
-        outline: none;
-        color: white;
-        font-family: 'Noto Sans Linear A', sans-serif;
-        font-size: 1rem;
-        padding-left: 3%;
-    }
-    #final_input{
-        margin-bottom: 0;
-    }
-    .submit{
-        width: 100%;
-    }
-    .contact_info{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .contact_info i{
-        width: 4vw;
-    }
-    .reseaux_list{
-        height: 25px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: start;
-    }
-    .reseaux_list i{
-
-        margin-right: 10%;
-    }
-    .reseaux_list i:hover{
-        transition: 0.5s;
-        margin-right: 10%;
-        color: #FFAB00;
+        justify-content: end;
+        background-color: antiquewhite;
     }
 </style>
+<script>
+    const mobile_menu = document.getElementById('mobile_menu');
+    mobile_menu.addEventListener('click', function() {
+        console.log('clicked');
+        if (document.querySelector('.mobile_navbar').style.left == '0px') {
+            document.querySelector('.mobile_navbar').style.left = '-20%';
+        }else{
+            document.querySelector('.mobile_navbar').style.left = '0px';
+        }
+    });
+</script>
