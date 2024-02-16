@@ -22,12 +22,14 @@ const translation = {
         appert: "Nicolas Appert high school",
         appert_text: "Arriving at high school, I started a general second year to be able to join a STI2D sector in the first and final years. First, I learned the basics of HTML and CSS as well as the basics of C in order to program arduino cards. Then in final year, I consolidated my C bases and discovered new languages ​​such as PHP, SQL",
         IUT: "IUT of Nantes",
-        IUT_text: "It is here that I really felt an improvement in my mastery of programming languages ​​in HTML, CSS, Python as well as SQL. But I also discovered new languages ​​with golang, bash and kotlin "
+        IUT_text: "It is here that I really felt an improvement in my mastery of programming languages ​​in HTML, CSS, Python as well as SQL. But I also discovered new languages ​​with golang, bash and kotlin"
     },
 };
 function chgLang(){
     var currentLoc=window.location.href
     var langPath=document.getElementById("lang").src;
+    console.log(currentLoc+"imgs/fr.png")
+    document.getElementById("lang").src=currentLoc+"imgs/fr.png";
     if(langPath==currentLoc+"imgs/fr.png"){//on change la langue en anglais
         document.getElementById("lang").src=currentLoc+"imgs/en.png";
         for (i=0;i<id.length;i++){

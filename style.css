@@ -1,20 +1,26 @@
+:root{
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    --mobile_background_color: #1a191ce3;
+    --background_color: #201F23;
+    --darker_color: #1A191C;
+    --second_color : #FFAB00;
+    --font_color: #ffffff;
+    --font_color_paragraph: #ffffff;
+    --border_color: #111;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    width: 99vw;
-    --scroll-behavior: smooth;
-    scroll-behavior: smooth;
-}
 body{
-    background-color: #201F23;
+    background-color: var(--background_color);
     margin: 0;
 }
 a {
     text-decoration: none;
-    color: white;
+    color: var(--font_color);
 }
 .mobile_navbar{
     transition: 1s;
@@ -23,7 +29,7 @@ a {
     height: 100vh;
     width: 60%;
     z-index: 1;
-    background-color: #1a191ce3;
+    background-color: var(--mobile_background_color);
     backdrop-filter: blur(5px);
 }
 .mobile_navbar ul{
@@ -36,15 +42,15 @@ a {
     align-items: center;
     height: 10vh;
     width: 100%;
-    border-bottom: 1px solid #FFAB00;
+    border-bottom: 1px solid var(--second_color);
 }
 .mobile_navbar li:hover{
-    background-color: #FFAB00;
+    background-color: var(--second_color);
     transition: 0.5s;
-    color: white;
+    color: var(--font_color_paragraph);
 }
 .mobile_navbar a:hover {
-    color: white;
+    color: var(--font_color_paragraph);
 }
 .mobile_navbar div{
     display: flex;
@@ -76,20 +82,46 @@ a {
     display: none;
 }
 .namehead{
-    color: #fff;
+    color: var(--font_color);
     font-size: 1.8rem;
     font-weight: 600;
     padding: 1% 0px 1% 0px;
     font-family: Archivo Black;
 }
+
+.menu_container ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu_container{
+    display: flex;
+    height: 200px;
+    width: 5%;
+    flex-direction: column;
+}
+.menu_header{
+    background-color: #252525;
+    position: relative;
+    display: none;
+}
+.menu_header li{
+    width: calc(100% - 10px);
+    padding: 5px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
 #n{
-    color: #FFAB00;
+    color: var(--second_color);
 
 }
 .line{
     width: 100%;
     height: 0.5rem;
-    background-color: #F5CB5C;
+    background-color: var(--second_color);
 }
 .menu{
     display: flex;
@@ -125,14 +157,14 @@ a {
 li>a{
     transition: 0.5s;
     text-decoration: none;
-    color: #fff;
+    color: var(--font_color);
     font-size: 1.6rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
 }
 li>a:hover{
     transition: 0.5s;
-    color: #FFAB00;
+    color: var(--second_color);
     font-size: 1.7rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
@@ -159,17 +191,17 @@ li>a:hover{
 .underline{
     width: 50%;
     height: 0.5rem;
-    background-color: #FFAB00;
+    background-color: var(--second_color);
 }
 h1{
     font-family: Archivo Black;
-    color: #fff;
+    color: var(--font_color);
     font-size: 4rem;
 }
 .maintitle{
     margin-top: 10vh;
     font-family: Archivo Black;
-    color: #fff;
+    color: var(--font_color);
     font-size: 4rem;
 }
 #name{
@@ -185,7 +217,7 @@ h1{
     font-family: Noto Sans Linear A;
     margin-top: 2vh;
     font-family: Archivo Black;
-    color: #e8e8e8;
+    color: var(--font_color_paragraph);
     font-size: 1.3rem;
 }
 .button{
@@ -198,9 +230,9 @@ h1{
     justify-content: center;
     align-items: center;
     height: 5vh;
-    background-color: #FFAB00;
+    background-color: var(--second_color);
     text-decoration: none;
-    color: #fff;
+    color: var(--font_color);
     font-size: 1.3rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
@@ -216,22 +248,19 @@ h1{
     justify-content: center;
     align-items: center;
     height: 5vh;
-    background-color: #1a191c;
+    background-color: var(--darker_color);
     text-decoration: none;
-    color: #fff;
+    color: var(--font_color);
     font-size: 1.3rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     padding: 1% 2% 1% 2%;
-    border: 1px solid #FFAB00;
+    border: 1px solid var(--second_color);
     border-radius: 5px;
     margin-top: 2vh;
-    box-shadow: 0px 0px 10px 0px #FFAB00;
+    box-shadow: 0px 0px 10px 0px var(--second_color);
     transition: 0.5s;
-    
 }
-
-
 .photo{
     width: 50%;
     display: flex;
@@ -242,7 +271,7 @@ h1{
 .dot {
     height: 25vw;
     width: 25vw;
-    background-color: #FFAB00;
+    background-color: var(--second_color);
     border-radius: 50%;
     display: inline-block;
   }
@@ -263,7 +292,7 @@ h1{
 }
 .about h1{
     font-family: Archivo Black;
-    color: #fff;
+    color: var(--font_color);
     font-size: 2rem;
 
 }
@@ -277,33 +306,33 @@ h1{
     flex-direction: column;
 }
 .tl_circle{
-    background-color: orange;
+    background-color: var(--second_color);
     width: 100%;
     height: 6vw;
     border-radius: 50%;
     margin: 35% 0 35% 0;
 }
 .tl_line{
-    background-color: orange;
+    background-color: var(--second_color);
     width:  80%;
     height: 100%;
     border-radius: 0px 0px 10px 10px;
 }
 #tlfirst{
-    background-color: orange;
+    background-color: var(--second_color);
     width:  80%;
     height:  100%;
     border-radius:10px;
 }
 #tl_end{
-    background-color: orange;
+    background-color: var(--second_color);
     width:  80%;
     height:  100%;
     border-radius:10px;
 
 }
 .tl_line1{
-    background-color: orange;
+    background-color: var(--second_color);
     width: 80%;
     height: 100%;
     border-radius:10px 10px 0 0;
@@ -313,20 +342,19 @@ h1{
 }
 .card_about{
     transition: 0.5s;
-    background-color: #1A191C;
+    background-color: var(--darker_color);
     border-radius: 10px;
     padding: 10px;
-    color: white;
+    color: var(--font_color_paragraph);
     font-family: 'Noto Sans Linear A', sans-serif;
-    border: 2px orange solid;
+    border: 2px solid var(--border_color) ;
     margin: 2% 7% 2% 7%;
 }
 .card_about:hover{
     transition: 0.5s;
-    background-color: #1A191C;
     border-radius: 10px;
     padding: 10px;
-    color: white;
+    color: (--font_color_paragraph);
     font-family: 'Noto Sans Linear A', sans-serif;
     border: 2px orange solid;
     box-shadow: 0px 0px 10px 0px #5c5a5a;
@@ -340,20 +368,20 @@ h1{
 
 }
 .other-skills{
-    border: 3px solid #111;
+    border: 3px solid var(--border_color);
     box-shadow: 0px 0px 10px 0px #111;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #1a191c;
+    background-color: var(--darker_color);
     border-radius: 10px;
     margin: 5px 5vw 0px 5vw;
     padding: 5vh 0vh 5vh 0;
 }
 .dev-skills{
-    border: 3px solid #111;
+    border: 3px solid var(--border_color);
     box-shadow: 0px 0px 10px 0px #111;
     margin: 5px 5vw 0px 5vw;
     width: 50%;
@@ -361,20 +389,20 @@ h1{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #1a191c;
+    background-color: var(--darker_color);
     border-radius: 10px;
     padding: 5vh 0vh 5vh 0;
 }
 .skills h2{
     margin-top: 2vh;
     font-family: Archivo Black;
-    color: #fff;
+    color: var(--font_color);
     font-size: 2rem;
 }
 .skills h3{
     margin-top: 2vh;
     font-family: Archivo Black;
-    color: #fff;
+    color: var(--font_color);
     font-size: 1.5rem;
 }
 .backend{
@@ -388,16 +416,16 @@ h1{
     padding: 0px 5px 0px 5px;
     width: 100%;
     height: 1.7rem;
-    background-color: #1a191c;
+    background-color: var(--darker_color);
     border-radius: 5px;
     display: flex;
     align-items: center;
-    border: solid 2px #FFAB00;
+    border: solid 2px var(--second_color);
     justify-content: flex-start;
 }
 .innerbar{
     height: 1rem;
-    background-color: #FFAB00;
+    background-color: var(--second_color);
     border-radius: 5px;
 }
 #python{
@@ -408,6 +436,9 @@ h1{
 }
 #golang{
     width: 40%;
+}
+#kt{
+    width: 30%;
 }
 #html{
     width: 80%;
@@ -425,10 +456,19 @@ h1{
 #linux{
     width: 70%;
 }
+#figma{
+    width: 45%;
+}
+#photoshop{
+    width: 60%;
+}
+#docker{
+    width: 40%;
+}
 .project-content{
     width: 60%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
@@ -444,11 +484,12 @@ h1{
     flex-direction: row;
     margin-top: 5vh;
     padding: 1% 2% 1% 2%;
-    border: 3px solid #111;
+    border: 3px solid var(--border_color);
     box-shadow: 0px 0px 10px 0px #111;
     margin: 5px 5vw 0px 5vw;
-    background-color: #1a191c;
+    background-color: var(--darker_color);
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 .proj-card:hover{
     transition: 0.5s;
@@ -460,17 +501,18 @@ h1{
     border: 3px solid #111;
     box-shadow: 0px 0px 10px 0px rgb(36, 36, 36);
     margin: 5px 5vw 0px 5vw;
-    background-color: #1a191c;
+    background-color: var(--darker_color);
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 .proj-card h2{
     font-size: 2rem;
-    color: #fff;
+    color: var(--font_color);
     font-family: Archivo Black;;
 }
 .proj-card p{
     font-size: 0.85rem;
-    color: #fff;
+    color: var(--font_color);
     font-family: Archivo Black;
 }
 .proj-right img{
@@ -493,6 +535,7 @@ h1{
     width: 70%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 .projfoot{
     margin-top: 2%;
@@ -519,17 +562,19 @@ h1{
     display: flex;
     flex-direction: row;
 }
-.play img{
+.play path{
     width: 5vh;
     margin-left: 0.5vw;
+    fill: #fff;
 }
+
 #phpcode{
     width: 8vh;
 }
 .play a {
     display: flex;
     text-decoration: none;
-    color: #fff;
+    color: var(--font_color);
     font-size: 1rem;
     font-weight: 600;
     align-items: center;
@@ -545,12 +590,12 @@ h1{
     width: 5vh;
     height: 3vh;
     border-radius: 4px;
-    background-color: #FFAB00;
+    background-color: var(--second_color);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    color: #fff;
+    color: var(--font_color);
 }
 .fullcontentcontact{
     margin-top: 10vh;
@@ -597,7 +642,7 @@ textarea{
     width: 100%;
     height: 100%;
     background-color: #2b2b2b;
-    border: #FFF 2px solid;
+    border: var(--font_color) 2px solid;
     border-radius: 10px;
     outline: none;
     color: white;
@@ -612,7 +657,7 @@ input{
     width: 90%;
     height: 5vh;
     background-color: #2b2b2b;
-    border: #FFF 2px solid;
+    border: var(--font_color) 2px solid;
     border-radius: 10px;
     outline: none;
     color: white;
