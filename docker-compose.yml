@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    # The official v2 Traefik docker image
+    image: traefik:v2.10
+    # Enables the web UI and tells Traefik to listen to docker
+    command: --api.insecure=true --providers.docker
+    ports:
+      # The HTTP port
+      - "80:80"
+      # The Web UI (enabled by --api.insecure=true)
+      - "8080:8080"
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock
+  portfolio:
+    image: httpd:latest
+    volumes:
+      - ./sites/portfolio:/usr/local/apache2/htdocs/
+    labels:
+      - "traefik.http.routers.portfolio.rule=Host(`portfolio.sparkiZ3.fr`)"
+  sparkwiki:
+    image: httpd:latest
+    volumes:
+      - ./sites/sparkwiki:/usr/local/apache2/htdocs/
+    labels:
+      - "traefik.http.routers.sparkwiki.rule=Host(`sparkwiki.sparkiZ3.fr`)"
+  geo-quiz:
+    image: php:7.2-apache
+    volumes:
+      - ./site/geo-quiz:/var/www/html
+    labels:
+      - "traefik.http.routers.geo-quiz.rule=Host(`geo-quiz.sparkiZ3.fr`)"
