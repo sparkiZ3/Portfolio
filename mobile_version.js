@@ -5,6 +5,4 @@ function theme(){
     r.style.setProperty('--darker_color', '#FFFFFF');
     r.style.setProperty('--font_color_paragraph', '#000');
     r.style.setProperty('--border_color', '#FFF');
-
-    
 }

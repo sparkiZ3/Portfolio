@@ -6,7 +6,10 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo Black">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans Linear A">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Roboto">
+
     <script src="script.js"></script>
+    
     <script src="mobile_version.js"></script>
     <script src="https://kit.fontawesome.com/923b733eaa.js" crossorigin="anonymous"></script>
 
@@ -52,7 +55,7 @@
                     <p id="main_presentation">Hey ! je suis Noan et je suis un étudiant dévelopeur. J'étudie actuellement la programmation dans le cadre de mes etudes a l'IUT.</p>
                     <div class="button">
                         <a id="contactbuttonmain1" href="#contact">Me contacter</p><div class="contactbutton"></div></a>
-                        <a id="contactbuttonmain2" href="#contact">Me contacter<div class="contactbutton"></div></a>
+                        <a id="contactbuttonmain2" href="CV_Noan-LISSILLOUR.pdf">Mon CV<div class="contactbutton"></div></a>
                     </div>
                 </div>
                 </div>
@@ -183,7 +186,7 @@
                 <div class="proj-right">
                     <div class="projhead">
                         <h2>Projet Portfolio</h2>
-                        <p>Ce portfolio fait aussi parti d'un de mes projets car j'ai pus y apprendre de nombreuses choses </p>
+                        <p>Ce portfolio fait aussi partie d'un de mes projets car j'ai pu y apprendre de nombreuses choses.</p>
                     </div>
                     <div class="projfoot">
                         <div class="code">
@@ -203,7 +206,7 @@
                 <div class="proj-right">
                     <div class="projhead">
                         <h2>Projet flag-game</h2>
-                        <p>Le projet flag-game est un jeux qui consiste a trouver a partir du drapeau, le nom du pays</p>
+                        <p>Le projet flag-game est un jeu qui consiste a trouver à partir du drapeau, le nom du pays</p>
                     </div>
                     <div class="projfoot">
                         <div class="code">
@@ -221,18 +224,18 @@
         </div>
         <h1 id="contact" class="maintitle"><span id="n">C</span>ontact</h1>
         <div class="fullcontentcontact">
-            <form action="" method="get">
+            <form method="get">
                 <div class="form_container">
                     <div class="left_input">
-                        <input placeholder="Name" required>
-                        <input placeholder="Subject" required>
-                        <input id="final_input" placeholder="E-mail" required>
+                        <input name="name" id="nameForm" placeholder="Name" required>
+                        <input name="subject" id="subjectForm" placeholder="Subject" required>
+                        <input name="mail" id="final_inputForm" placeholder="E-mail" required>
                     </div>
                     <div class="right_input">
-                        <textarea placeholder="Message" required></textarea>
+                        <textarea name="msgForm" id="MessageForm" placeholder="Message" required></textarea>
                     </div>
                 </div>
-                <input class="submit" type="submit" value="envoyer !" />
+                <p onclick="sendData()" class="submit">Envoyer !</p>
             </form>
             <div class="contactspace"></div>
             <div class="content_contact">
@@ -252,12 +255,15 @@
                     <hr>
                     <div class="reseaux_list">
                         <a href="https://github.com/sparkiZ3"><i class="fa-brands fa-github fa-2xl"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                        <a href="https://www.linkedin.com/in/noan-lissillour-6152b7278/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <p>© 2023 Noan LISSILLOUR</p>
+    </footer>
 
 </body>
 <script>
@@ -268,6 +274,18 @@
             document.querySelector('.mobile_navbar').style.left = '0px';
         }
 }
+</script>
+<script>
+    function sendData(){
+        var name = document.getElementById('nameForm').value;
+        var subject = document.getElementById('subjectForm').value;
+        var mail = document.getElementById('final_inputForm').value;
+        var msg = document.getElementById('MessageForm').value;
+
+
+        console.log(name, subject, mail, msg);
+        alert("Votre message a bien été envoyé");
+    }
 </script>
 </html>
 
