@@ -28,16 +28,19 @@ const translation = {
 function chgLang(){
     var currentLoc=window.location.href
     var langPath=document.getElementById("lang").src;
-    console.log(currentLoc+"imgs/fr.png")
+    //console.log(currentLoc+"imgs/fr.png")
     document.getElementById("lang").src=currentLoc+"imgs/fr.png";
+    document.getElementById("langM").src=currentLoc+"imgs/fr.png";
     if(langPath==currentLoc+"imgs/fr.png"){//on change la langue en anglais
         document.getElementById("lang").src=currentLoc+"imgs/en.png";
+        document.getElementById("langM").src=currentLoc+"imgs/en.png";
         for (i=0;i<id.length;i++){
             iddata=id[i]
             document.getElementById(iddata).innerHTML=translation.en[iddata];
         }
     }else if(langPath==currentLoc+"imgs/en.png"){//on change la langue en français
         document.getElementById("lang").src=currentLoc+"imgs/fr.png";
+        document.getElementById("langM").src=currentLoc+"imgs/fr.png";
         for (i=0;i<id.length;i++){
             iddata=id[i]
             document.getElementById(iddata).innerHTML=translation.fr[iddata];
